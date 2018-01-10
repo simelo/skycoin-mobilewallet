@@ -9,15 +9,23 @@ import { WalletProvider } from '../../providers/wallet/wallet.provider';
 export class TransactionsPage implements OnInit {
 
   transactions: any[];
-  public iconDirection: string = 'left';
 
   constructor(
     private backend: BackendApiProvider,
     private wallet: WalletProvider,
   ) {}
 
+  iconDirection(status: any): string{
+    let direction;
+    if(status.confirmed){
+      direction = 'left';
+    } else {
+      direction = 'right';
+    }
+    return direction;
+  }
+
   ngOnInit() {
-    this.iconDirection = 'left';
     /* return this.wallet.addresses.first().subscribe(addresses => {
       this.backend.getTransactions(addresses).subscribe(transactions => {
         this.transactions = transactions;

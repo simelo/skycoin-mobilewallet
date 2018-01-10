@@ -12,7 +12,7 @@
         <div class="tx-wrapper">
           <ion-row>
             <ion-col col-2>
-              <tx-arrow-icon [iconDirection]="iconDirection"></tx-arrow-icon>
+              <tx-arrow-icon [iconDirection]="iconDirection(transaction.status)"></tx-arrow-icon>
             </ion-col>
             <ion-col col-7>
               <ion-row>
