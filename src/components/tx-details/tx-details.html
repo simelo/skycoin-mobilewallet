@@ -31,7 +31,7 @@
         </ion-col>
         <ion-col col-9>
           <div class="text-right margin-top-10 margin-right-5 font-s12-h14">
-            Tuesday, November 7, 2017
+            {{ transaction.txn.timestamp * 1000 | txdate }}
           </div>
         </ion-col>
       </ion-row>
@@ -45,7 +45,7 @@
         </ion-col>
         <ion-col col-9>
           <div class="text-right margin-top-10 margin-right-5 font-s12-h14">
-            Complete
+            {{ txStatus(transaction.status) }}
           </div>
         </ion-col>
       </ion-row>
@@ -62,7 +62,7 @@
             Personal Wallet
           </div>
           <div class="text-right margin-right-5 from-addrs">
-            KJKAJDSK ... JLAKJDKSL
+            {{ transaction.txn.txid | address }}
           </div>
         </ion-col>
       </ion-row>
@@ -76,7 +76,7 @@
         </ion-col>
         <ion-col col-9>
           <div class="text-right margin-top-10 margin-right-5 font-s12-h14">
-            KJKAJDSK ... JLAKJDKSL
+            {{ transaction.txn.outputs[0].dst | address }}
           </div>
         </ion-col>
       </ion-row>

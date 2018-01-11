@@ -32,6 +32,10 @@ export class TxDetailsComponent {
     return direction;
   }
 
+  txStatus(status: any): string{
+    return status.confirmed ? 'Complete' : 'Pending';
+  }
+
   close(){
     this.viewCtrl.dismiss();
   }
