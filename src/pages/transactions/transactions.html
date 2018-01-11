@@ -8,7 +8,7 @@
   <div class="-header primary-header-background"></div>
   <ion-list>
     <ion-grid no-padding>
-      <div class="tx-container" *ngFor="let transaction of transactions">
+      <div class="tx-container" *ngFor="let transaction of transactions" (click)="transactionDetails(transaction)">
         <div class="tx-wrapper">
           <ion-row>
             <ion-col col-2>

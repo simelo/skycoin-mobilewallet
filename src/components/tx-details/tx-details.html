@@ -1,0 +1,114 @@
+<!-- Generated template for the TxDetailsComponent component -->
+<div class="tx-details-container">
+  <ion-grid no-padding>
+    <ion-row>
+      <div class="header">
+        <p>Send SKY</p>
+        <ion-icon class="close" name="close" (click)="close()"></ion-icon>
+      </div>
+    </ion-row>
+    <ion-row>
+      <div class="value">
+        <div class="icon-arrow">
+          <tx-arrow-icon [iconDirection]="iconDirection(transaction.status)"></tx-arrow-icon>
+        </div>
+        <div class="sky-value">
+          <div class="sky">
+            -25 SKY
+          </div>
+          <div class="amount">
+            $98.00
+          </div>
+        </div>
+      </div>
+    </ion-row>
+    <div class="row-container">
+      <ion-row>
+        <ion-col col-3>
+          <div class="margin-top-10 margin-left-5 font-s12-h14 font-opacity">
+            Date
+          </div>
+        </ion-col>
+        <ion-col col-9>
+          <div class="text-right margin-top-10 margin-right-5 font-s12-h14">
+            Tuesday, November 7, 2017
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+    <div class="row-container">
+      <ion-row>
+        <ion-col col-3>
+          <div class="margin-top-10 margin-left-5 font-s12-h14 font-opacity">
+            Status
+          </div>
+        </ion-col>
+        <ion-col col-9>
+          <div class="text-right margin-top-10 margin-right-5 font-s12-h14">
+            Complete
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+    <div class="row-container height-70">
+      <ion-row>
+        <ion-col col-3>
+          <div class="margin-top-10 margin-left-5 margin-right-5 font-s12-h14 font-opacity">
+            From
+          </div>
+        </ion-col>
+        <ion-col col-9>
+          <div class="text-right margin-top-10 margin-right-5 font-s12-h14">
+            Personal Wallet
+          </div>
+          <div class="text-right margin-right-5 from-addrs">
+            KJKAJDSK ... JLAKJDKSL
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+    <div class="row-container">
+      <ion-row>
+        <ion-col col-3>
+          <div class="margin-top-10 margin-left-5 font-s12-h14 font-opacity">
+            To
+          </div>
+        </ion-col>
+        <ion-col col-9>
+          <div class="text-right margin-top-10 margin-right-5 font-s12-h14">
+            KJKAJDSK ... JLAKJDKSL
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+    <div class="row-container height-70">
+      <ion-row>
+        <ion-col col-3>
+          <div class="margin-top-10 margin-left-5 font-s12-h14 font-opacity">
+            Notes
+          </div>
+        </ion-col>
+        <ion-col col-9>
+          <div class="text-right margin-top-10 margin-right-5 font-s12-h14">
+            ___
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+    <div class="row-container">
+      <ion-row>
+        <ion-col col-3>
+          <div class="margin-top-10 margin-left-5 font-s12-h14 font-opacity">
+            TX Time
+          </div>
+        </ion-col>
+        <ion-col col-9>
+          <div class="text-right margin-top-10 margin-right-5 font-s12-h14">
+            3 Seconds
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+
+  </ion-grid>
+</div>

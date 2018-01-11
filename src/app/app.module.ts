@@ -36,6 +36,7 @@ import { AddWalletPage } from '../pages/add-wallet/add-wallet';
 import { LoadWalletPage } from '../pages/load-wallet/load-wallet';
 import { SkyDatePipe } from '../pipes/sky-date/sky-date';
 import { TxArrowIconComponent } from '../components/tx-arrow-icon/tx-arrow-icon';
+import { TxDetailsComponent } from '../components/tx-details/tx-details';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { TxArrowIconComponent } from '../components/tx-arrow-icon/tx-arrow-icon'
     AddressPipe,
     SkyDatePipe,
     TxArrowIconComponent,
+    TxDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -77,6 +79,7 @@ import { TxArrowIconComponent } from '../components/tx-arrow-icon/tx-arrow-icon'
     TransactionsPage,
     WalletDetailPage,
     WalletsPage,
+    TxDetailsComponent,
   ],
   providers: [
     File,

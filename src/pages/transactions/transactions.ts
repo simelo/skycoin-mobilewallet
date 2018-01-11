@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { BackendApiProvider } from '../../providers/backend-api/backend-api.provider';
 import { WalletProvider } from '../../providers/wallet/wallet.provider';
+import { PopoverController } from "ionic-angular";
+import { TxDetailsComponent } from "../../components/tx-details/tx-details";
 
 @Component({
   selector: 'page-transactions',
@@ -13,6 +15,7 @@ export class TransactionsPage implements OnInit {
   constructor(
     private backend: BackendApiProvider,
     private wallet: WalletProvider,
+    public popoverCtrl: PopoverController,
   ) {}
 
   iconDirection(status: any): string{
@@ -123,5 +126,10 @@ export class TransactionsPage implements OnInit {
     }];
 
     this.transactions = transaction;
+  }
+
+  transactionDetails(transaction: any){
+    let txDitailsPop = this.popoverCtrl.create(TxDetailsComponent, {transaction: transaction }, { enableBackdropDismiss: false });
+    txDitailsPop.present();
   }
 }
