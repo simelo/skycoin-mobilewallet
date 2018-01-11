@@ -37,7 +37,6 @@ import { LoadWalletPage } from '../pages/load-wallet/load-wallet';
 import { SkyDatePipe } from '../pipes/sky-date/sky-date';
 import { TxArrowIconComponent } from '../components/tx-arrow-icon/tx-arrow-icon';
 import { TxDetailsComponent } from '../components/tx-details/tx-details';
-import { TxDetailsDatePipe } from '../pipes/tx-details-date/tx-details-date';
 
 @NgModule({
   declarations: [
@@ -61,7 +60,6 @@ import { TxDetailsDatePipe } from '../pipes/tx-details-date/tx-details-date';
     SkyDatePipe,
     TxArrowIconComponent,
     TxDetailsComponent,
-    TxDetailsDatePipe,
   ],
   imports: [
     BrowserModule,

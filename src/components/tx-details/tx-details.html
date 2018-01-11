@@ -31,7 +31,7 @@
         </ion-col>
         <ion-col col-9>
           <div class="text-right margin-top-10 margin-right-5 font-s12-h14">
-            {{ transaction.txn.timestamp * 1000 | txdate }}
+            {{ transaction.txn.timestamp * 1000 | date: 'fullDate' }}
           </div>
         </ion-col>
       </ion-row>
