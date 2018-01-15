@@ -1,0 +1,18 @@
+sky-input {
+  div{
+    width: 90%;
+    margin: auto;
+
+    label{
+      display: block;
+      margin-bottom: 5px;
+    }
+    input{
+      border-radius: 5px;
+      border: rgba(0,0,0,0.1) solid 2px;
+      height: 40px;
+      padding-left: 10px;
+      width: 100%;
+    }
+  }
+}
