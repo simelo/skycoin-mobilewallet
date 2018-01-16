@@ -1,0 +1,16 @@
+<!-- Generated template for the ModalNoStorageComponent component -->
+<div class="-modal">
+  <div class="-header">
+    IMPORTANT!
+    <div class="-close" (click)="disableSecure()"><ion-icon name="close"></ion-icon></div>
+  </div>
+  <div class="-body">
+    <p>
+      We could not instantiate our secure storage service on your device. This means you cannot set a pincode and/or
+      save your wallet seeds on your device. Whenever you want to transfer funds out of your wallet, you will be
+      requested to enter your wallet seed again. <b>Without your seed your funds will most likely be irretrievably
+      lost.</b>
+    </p>
+    <button ion-button color="light" round class="-continue" (click)="disableSecure()">Continue</button>
+  </div>
+</div>

@@ -1,7 +1,8 @@
 import { Component, ElementRef } from '@angular/core';
-import { AlertController, NavController } from 'ionic-angular';
+import { AlertController, ModalController, NavController } from 'ionic-angular';
 import { SecureStorageProvider } from '../../providers/secure-storage/secure-storage';
 import { WalletsPage } from '../wallets/wallets';
+import { ModalNoStorageComponent } from "../../components/sky-modal/modal-no-storage/modal-no-storage";
 
 /**
  * Generated class for the PincodePage page.
@@ -26,6 +27,7 @@ export class PincodePage {
     public el: ElementRef,
     public nav: NavController,
     public secureStorage: SecureStorageProvider,
+    public modalCtrl: ModalController
   ) {
     this.secureStorage.get('pin').subscribe(
       pin => {
@@ -37,7 +39,11 @@ export class PincodePage {
           this.startCreateNewPinFlow();
         } else {
           // error.toString() === 'Error: Device is not secure'
-          this.storageAvailable = false;
+          const modal = this.modalCtrl.create(ModalNoStorageComponent);
+          modal.onDidDismiss( () => {
+            this.disableSecure();
+          });
+          modal.present();
         }
       }
     );
