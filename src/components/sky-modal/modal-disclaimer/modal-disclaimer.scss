@@ -12,41 +12,12 @@ modal-disclaimer {
     -o-transform: translateX(-50%);
     transform: translateX(-50%);
 
-    .-header {
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      background-color: #f7f7f7;
-      border-bottom: 1px solid #eee;
-      color: #fb003d;
-      line-height: 50px;
-      min-height: 40px;
-      height: 50px;
-      text-align: center;
-
-      .-close{
-        background-color: transparent;
-        border: none;
-        border-radius: 5px;
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
-        -ms-box-shadow: none;
-        -o-box-shadow: none;
-        box-shadow: none;
-        color: rgba(0,0,0,0.2);
-        margin: 0;
-        position: absolute;
-        font-size: 16px;
-        height: 50px;
-        width: 50px;
-        right: 0;
-        top: 0;
-      }
-    }
     .-body {
       padding: 25px;
       p {
-        color: #16191d;
+        color: #1E2227;
         margin: 0 0 25px 0;
+        opacity: 0.8;
       }
       .-checkbox {
         text-align: center;
@@ -66,9 +37,9 @@ modal-disclaimer {
       }
 
       .-continue {
-        //background-color: #ececed;
+        background: linear-gradient(-20deg, #00C3FF, #0072FF);
         //border-radius: 25px;
-        color: #848484;
+        color: #FBFBFB;
         display: block;
         font-size: 14px;
         font-weight: 700;
@@ -76,6 +47,16 @@ modal-disclaimer {
         line-height: 50px;
         margin: 0 auto;
         width: 160px;
+        text-transform: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        -ms-box-shadow: none;
+        -o-box-shadow: none;
+        box-shadow: none
+      }
+      .-continue[disabled]{
+        background: #F0F0F0;
+        color: rgba(30, 34, 39, 0.2);
       }
     }
   }

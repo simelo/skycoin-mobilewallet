@@ -36,6 +36,7 @@ import { AddWalletPage } from '../pages/add-wallet/add-wallet';
 import { LoadWalletPage } from '../pages/load-wallet/load-wallet';
 import { ModalNoStorageComponent } from '../components/sky-modal/modal-no-storage/modal-no-storage';
 import { ModalDisclaimerComponent } from '../components/sky-modal/modal-disclaimer/modal-disclaimer';
+import { ModalHeaderComponent } from '../components/sky-modal/modal-header/modal-header';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { ModalDisclaimerComponent } from '../components/sky-modal/modal-disclaim
     AddressPipe,
     ModalNoStorageComponent,
     ModalDisclaimerComponent,
+    ModalHeaderComponent,
   ],
   imports: [
     BrowserModule,

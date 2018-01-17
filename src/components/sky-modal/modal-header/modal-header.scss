@@ -1,0 +1,40 @@
+modal-header {
+  .-header {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #eee;
+    color: #fb003d;
+    line-height: 50px;
+    min-height: 40px;
+    height: 50px;
+    text-align: center;
+
+    .-close{
+      background-color: transparent;
+      border: none;
+      border-radius: 5px;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      -ms-box-shadow: none;
+      -o-box-shadow: none;
+      box-shadow: none;
+      color: rgba(0,0,0,0.2);
+      margin: 0;
+      position: absolute;
+      font-size: 16px;
+      height: 50px;
+      width: 50px;
+      right: 0;
+      top: 0;
+    }
+    .-close:hover{
+      background-color: transparent;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      -ms-box-shadow: none;
+      -o-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+}

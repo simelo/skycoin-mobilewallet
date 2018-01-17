@@ -1,11 +1,6 @@
 <!-- Generated template for the ModalDisclaimerComponent component -->
 <div class="-modal">
-  <div class="-header">
-    DISCLAIMER!
-    <button ion-button icon-only class="-close" [disabled]="!disclaimerAccepted" (click)="acceptDisclaimer()">
-      <ion-icon name="close"></ion-icon>
-    </button>
-  </div>
+  <modal-header [header]="'Disclaimer'" [disabledClose]="!disclaimerAccepted" (close)="acceptDisclaimer()"></modal-header>
   <div class="-body">
     <p>
       By continuing, you understand the risks related to the use of cryptographic tokens & blockchain-based software,

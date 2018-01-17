@@ -1,11 +1,6 @@
 <!-- Generated template for the ModalNoStorageComponent component -->
 <div class="-modal">
-  <div class="-header">
-    IMPORTANT!
-    <button ion-button icon-only class="-close" (click)="disableSecure()">
-      <ion-icon name="close"></ion-icon>
-    </button>
-  </div>
+  <modal-header [header]="'IMPORTANT!'" (close)="disableSecure()"></modal-header>
   <div class="-body">
     <p>
       We could not instantiate our secure storage service on your device. This means you cannot set a pincode and/or
