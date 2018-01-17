@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Storage } from '@ionic/storage';
-import { NavController, Platform } from 'ionic-angular';
+import { ModalController, NavController, Platform } from 'ionic-angular';
 import { PincodePage } from '../pincode/pincode';
+import { ModalDisclaimerComponent } from "../../components/sky-modal/modal-disclaimer/modal-disclaimer";
 
 @Component({
   selector: 'page-disclaimer',
@@ -9,13 +10,11 @@ import { PincodePage } from '../pincode/pincode';
 })
 export class DisclaimerPage implements OnInit {
 
-  disclaimerAccepted: boolean;
-  showDisclaimer: boolean;
-
   constructor(
     private nav: NavController,
     private platform: Platform,
     private storage: Storage,
+    private modalCtrl: ModalController,
   ) {}
 
   ngOnInit() {
@@ -24,7 +23,11 @@ export class DisclaimerPage implements OnInit {
         if (data) {
           this.nav.setRoot(PincodePage);
         } else {
-          this.showDisclaimer = true;
+          const modal = this.modalCtrl.create(ModalDisclaimerComponent);
+          modal.onDidDismiss(() => {
+            this.acceptDisclaimer();
+          });
+          modal.present();
         }
       })
     });

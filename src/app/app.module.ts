@@ -35,6 +35,7 @@ import { TabsComponent } from '../components/tabs/tabs';
 import { AddWalletPage } from '../pages/add-wallet/add-wallet';
 import { LoadWalletPage } from '../pages/load-wallet/load-wallet';
 import { ModalNoStorageComponent } from '../components/sky-modal/modal-no-storage/modal-no-storage';
+import { ModalDisclaimerComponent } from '../components/sky-modal/modal-disclaimer/modal-disclaimer';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { ModalNoStorageComponent } from '../components/sky-modal/modal-no-storag
     WalletOptionPipe,
     AddressPipe,
     ModalNoStorageComponent,
+    ModalDisclaimerComponent,
   ],
   imports: [
     BrowserModule,
@@ -76,6 +78,7 @@ import { ModalNoStorageComponent } from '../components/sky-modal/modal-no-storag
     WalletDetailPage,
     WalletsPage,
     ModalNoStorageComponent,
+    ModalDisclaimerComponent,
   ],
   providers: [
     File,
